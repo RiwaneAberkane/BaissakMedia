@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Baissak Media</title>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- ===== HEADER (terracotta) ===== -->
+    <header class="site-header">
+        <div class="container header-bar">
+            <a href="#" class="brand" aria-label="Baissak Media">
+                BAISSAK MEDIA
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Open menu">☰</button>
+                <ul id="menu" class="nav-list">
+                    <li><a class="nav-link" href="#services">SERVICES</a></li>
+                    <li><a class="nav-link" href="#portfolio">PORTFOLIO</a></li>
+                    <li><a class="nav-link" href="#about">À PROPOS</a></li>
+                    <li><a class="nav-link nav-cta" href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== HERO (crème) ===== -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <h1 class="hero-title">AGENCE DE COMMUNICATION<br />CRÉATIVE</h1>
+            <p class="hero-subtitle">STRATÉGIE DE CONTENU &amp; PRODUCTION VIDÉO</p>
+
+            <a class="btn btn-primary" href="#services">EN SAVOIR PLUS</a>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="section-services" aria-labelledby="titre-services">
+        <div class="conteneur">
+            <header class="entete-section">
+                <h2 id="titre-services" class="titre-section">NOS SERVICES</h2>
+            </header>
+
+            <div class="grille-services">
+                <!-- Service 1 -->
+                <article class="carte-service">
+                    <div class="icone-service">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.6"
+                            viewBox="0 0 24 24">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <path d="M8 9h8M8 12h5" />
+                        </svg>
+                    </div>
+                    <h3 class="titre-service">Social Media Management</h3>
+                    <p class="texte-service">
+                        Pilotage de votre présence et de votre ligne éditoriale sur l’ensemble des réseaux sociaux.
+                        Calendrier de contenus, modération, reporting et optimisation de la performance.
+                    </p>
+                </article>
+
+                <!-- Service 2 -->
+                <article class="carte-service">
+                    <div class="icone-service">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.6"
+                            viewBox="0 0 24 24">
+                            <path d="M12 2v20M5 8h14M5 16h14" />
+                        </svg>
+                    </div>
+                    <h3 class="titre-service">Content Creation</h3>
+                    <p class="texte-service">
+                        Conception et production de contenus sur mesure : shootings photo, stories, carrousels,
+                        scripts et storytelling alignés avec votre identité de marque.
+                    </p>
+                </article>
+
+                <!-- Service 3 -->
+                <article class="carte-service">
+                    <div class="icone-service">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.6"
+                            viewBox="0 0 24 24">
+                            <rect x="4" y="3" width="16" height="18" rx="2" />
+                            <path d="M8 8h8v8H8z" />
+                        </svg>
+                    </div>
+                    <h3 class="titre-service">Video Editing</h3>
+                    <p class="texte-service">
+                        Montage professionnel pour publicités, reels et campagnes brandées : rythme, habillage,
+                        sous-titres, sound design et exports optimisés pour chaque plateforme.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PORTFOLIO DESIGN ===== -->
+    <section id="portfolio" class="section-portfolio" aria-labelledby="titre-portfolio">
+        <div class="conteneur">
+            <header class="entete-portfolio">
+                <p class="sur-titre-portfolio">Nos réalisations</p>
+                <h2 id="titre-portfolio" class="titre-portfolio">Un aperçu de notre savoir-faire</h2>
+                <p class="texte-intro-portfolio">
+                    De la création de contenu aux campagnes vidéo, découvrez des projets qui illustrent notre exigence
+                    créative et notre maîtrise des codes sociaux.
+                </p>
+            </header>
+
+            <div class="grille-portfolio">
+                <!-- Projet 1 -->
+                <article class="carte-portfolio">
+                    <a href="projet-milano.html" class="visuel-portfolio" aria-label="Voir le projet Le Milano">
+                        <img src="images/milano-photo1.jpg" alt="Campagne réseaux sociaux mode">
+                        <figcaption class="overlay-portfolio">
+                            <div class="overlay-texte">
+                                <h3>Campagne Social Media</h3>
+                                <p>Stratégie, shooting et diffusion multi-plateformes.</p>
+                            </div>
+                        </figcaption>
+                    </a>
+                </article>
+
+                <!-- Projet 2 -->
+                <article class="carte-portfolio">
+                    <a href="projet-funky-doughny.html" class="visuel-portfolio"
+                        aria-label="Voir le projet Funky Doughny">
+                        <img src="images/funky-dougny.jpg" alt="Funky Doughny — montage vidéo social">
+                        <figcaption class="overlay-portfolio">
+                            <div class="overlay-texte">
+                                <h3>Funky Doughny</h3>
+                                <p>Montage vidéo pour TikTok & Reels</p>
+                            </div>
+                        </figcaption>
+                    </a>
+                </article>
+
+                <!-- Projet 3 -->
+                <article class="carte-portfolio">
+                    <a href="projet-halal-food-caen.html" class="visuel-portfolio"
+                        aria-label="Voir le projet Halal Food Caen">
+                        <img src="images/hfc1.jpg" alt="Halal Food Caen — sélection d’adresses">
+                        <figcaption class="overlay-portfolio">
+                            <div class="overlay-texte">
+                                <h3>Halal Food Caen</h3>
+                                <p>Référencement & social content</p>
+                            </div>
+                        </figcaption>
+                    </a>
+                </article>
+            </div>
+
+            <div class="cta-portfolio">
+                <a href="#contact" class="bouton bouton--or">Discutons de votre projet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== À PROPOS ===== -->
+    <section id="about" class="section-apropos" aria-labelledby="titre-apropos">
+        <div class="conteneur grille-apropos">
+
+            <!-- Image gauche -->
+            <figure class="visuel-apropos">
+                <img src="images/about-me.png" alt="Équipe Baissak Media au travail sur un projet vidéo">
+            </figure>
+
+            <!-- Texte droite -->
+            <div class="bloc-texte-apropos">
+                <p class="sur-titre-apropos">Notre vision</p>
+                <h2 id="titre-apropos" class="titre-apropos">Créer, raconter et inspirer</h2>
+                <p class="texte-apropos">
+                    Chez <strong>Baissak Media</strong>, chaque image, chaque mot et chaque plan servent votre histoire.
+                    Nous accompagnons marques et créateurs dans leur communication visuelle via la
+                    <em>création de contenu</em>, la <em>production vidéo</em> et la <em>gestion d’image</em> sur les
+                    réseaux sociaux.
+                </p>
+
+                <p class="texte-apropos">
+                    Notre équipe met son savoir-faire au service de votre univers pour donner vie à vos idées, avec une
+                    direction artistique soignée et un rendu professionnel.
+                </p>
+
+                <a href="#contact" class="bouton bouton--or">Collaborons ensemble</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT (alt) ===== -->
+    <section id="contact" class="section-contact-alt" aria-labelledby="titre-contact-alt">
+        <div class="bande-terracotta" aria-hidden="true"></div>
+
+        <div class="conteneur contenu-contact-alt">
+            <!-- Colonne infos -->
+            <div class="bloc-infos-alt">
+                <p class="sur-titre-contact">Discutons</p>
+                <h2 id="titre-contact-alt" class="titre-contact-alt">Contactez-nous</h2>
+                <p class="texte-contact-alt">
+                    Un brief, une idée, un tournage à planifier ? Notre équipe vous répond rapidement.
+                </p>
+
+                <ul class="liste-canaux">
+                    <li class="canal">
+                        <span class="icn">📞</span>
+                        <div>
+                            <strong>Téléphone</strong><br>
+                            <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+                        </div>
+                    </li>
+                    <li class="canal">
+                        <span class="icn">✉️</span>
+                        <div>
+                            <strong>Email</strong><br>
+                            <a href="mailto:baissakmedia@gmail.com">baissakmedia@gmail.com</a>
+                        </div>
+                    </li>
+                    <li class="canal">
+                        <span class="icn">📍</span>
+                        <div>
+                            <strong>Studio</strong><br>
+                            123 Rue de Rivoli, 75001 Paris
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="mini-badges">
+                    <span class="badge">⏱ Réponse ~24h</span>
+                    <span class="badge">🎬 Devis gratuit</span>
+                </div>
+            </div>
+
+            <!-- Carte formulaire flottante -->
+            <form class="carte-formulaire" action="#" method="post" aria-label="Formulaire de contact">
+                <h3 class="titre-form">Dites-nous tout</h3>
+
+                <div class="ligne-2">
+                    <label class="champ">
+                        <span>Nom</span>
+                        <input type="text" name="nom" autocomplete="name" required>
+                    </label>
+                    <label class="champ">
+                        <span>Email</span>
+                        <input type="email" name="email" autocomplete="email" required>
+                    </label>
+                </div>
+
+                <label class="champ">
+                    <span>Sujet</span>
+                    <input type="text" name="sujet" placeholder="Ex : Tournage vidéo reels" required>
+                </label>
+
+                <label class="champ">
+                    <span>Message</span>
+                    <textarea name="message" rows="5" placeholder="Parlez-nous de votre besoin…" required></textarea>
+                </label>
+
+                <button class="bouton bouton--or" type="submit"><span>Envoyer</span></button>
+                <p class="note-rgpd-alt">En envoyant, vous acceptez notre politique de confidentialité.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== PIED DE PAGE ===== -->
+    <footer id="pied-de-page" class="pied-de-page" role="contentinfo">
+        <!-- bande décorative -->
+        <div class="bande-degrade" aria-hidden="true"></div>
+
+        <div class="conteneur grille-footer v3">
+            <!-- Col 1 : Marque + réseaux -->
+            <div class="col-footer marque-col">
+                <a href="#accueil" class="marque marque--footer" aria-label="Accueil Baissak Media">
+                    <span class="marque__nom">Baissak</span>
+                    <span class="marque__tag">Media</span>
+                </a>
+                <p class="texte-footer">
+                    Agence de communication, création de contenu & montage vidéo.
+                </p>
+
+                <div class="reseaux">
+                    <a class="icone-reseau" href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                            stroke-width="1.6">
+                            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                            <circle cx="12" cy="12" r="3.5"></circle>
+                            <circle cx="17.3" cy="6.7" r="1.2" fill="currentColor" stroke="none"></circle>
+                        </svg>
+                    </a>
+                    <a class="icone-reseau" href="#" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                            <path
+                                d="M15 3h2a5 5 0 0 0 5 5v2a7 7 0 0 1-5-2v7.5A5.5 5.5 0 1 1 11 10h2a3.5 3.5 0 1 0 3 3.46V3z" />
+                        </svg>
+                    </a>
+                    <a class="icone-reseau" href="#" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                            <path
+                                d="M23 7.5a4 4 0 0 0-3-3.8C17.8 3 12 3 12 3s-5.8 0-8 .7A4 4 0 0 0 1 7.5 41 41 0 0 0 1 12a41 41 0 0 0 1 4.5 4 4 0 0 0 3 3.8c2.2.7 8 .7 8 .7s5.8 0 8-.7a4 4 0 0 0 3-3.8 41 41 0 0 0 1-4.5 41 41 0 0 0-1-4.5zM10 15.5v-7l6 3.5-6 3.5z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Col 2 : Navigation -->
+            <nav class="col-footer" aria-label="Navigation pied de page">
+                <h4 class="titre-col">Navigation</h4>
+                <ul class="liste-liens">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Col 3 : Services rapides -->
+            <div class="col-footer">
+                <h4 class="titre-col">Services</h4>
+                <ul class="liste-liens">
+                    <li><a href="#services">Social Media Management</a></li>
+                    <li><a href="#services">Content Creation</a></li>
+                    <li><a href="#services">Video Editing</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4 : Newsletter + contact court -->
+            <form class="col-footer bloc-newsletter bloc-newsletter--footer" action="#" method="post"
+                aria-label="Newsletter">
+                <h4 class="titre-col">Newsletter</h4>
+                <p class="texte-footer">Invitations, coulisses & nouveautés.</p>
+                <label class="sr-only" for="email-footer">Adresse email</label>
+                <div class="ligne-champ">
+                    <input id="email-footer" class="champ-texte champ-texte--footer" type="email" name="email"
+                        placeholder="vous@exemple.fr" required>
+                    <button class="bouton bouton--or bouton--compact" type="submit">S’inscrire</button>
+                </div>
+                <p class="note-rgpd note-rgpd--footer">Désinscription en un clic.</p>
+            </form>
+        </div>
+
+        <!-- Bas de page -->
+        <div class="bas-footer">
+            <div class="conteneur barres-legales">
+                <p class="mention">
+                    &copy; <span id="annee"></span> Baissak Media — Tous droits réservés.
+                </p>
+                <ul class="liens-legaux">
+                    <li><a href="#" rel="nofollow">Mentions légales</a></li>
+                    <li><a href="#" rel="nofollow">Confidentialité</a></li>
+                    <li><a href="#" rel="nofollow">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>document.getElementById('annee').textContent = new Date().getFullYear();</script>
+
+    <!-- tiny JS for mobile menu -->
+    <script>
+        const btn = document.querySelector('.nav-toggle');
+        const list = document.getElementById('menu');
+        btn?.addEventListener('click', () => {
+            const open = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', String(!open));
+            list.classList.toggle('is-open');
+        });
+    </script>
+</body>
+
+</html>

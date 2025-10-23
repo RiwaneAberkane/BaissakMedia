@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projet — Le Milano | Baissak Media</title>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- ===== HEADER (même que l’accueil) ===== -->
+    <header class="site-header">
+        <div class="container header-bar">
+            <a href="index.html" class="brand" aria-label="Baissak Media">
+                BAISSAK MEDIA
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Open menu">☰</button>
+                <ul id="menu" class="nav-list">
+                    <li><a class="nav-link" href="index.html#services">SERVICES</a></li>
+                    <li><a class="nav-link" href="index.html#portfolio">PORTFOLIO</a></li>
+                    <li><a class="nav-link" href="index.html#about">À PROPOS</a></li>
+                    <li><a class="nav-link nav-cta" href="index.html#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== HERO PROJET ===== -->
+    <section class="hero hero--projet">
+        <div class="container hero-projet-inner">
+            <p class="sur-titre-portfolio">Étude de cas</p>
+            <h1 class="hero-projet-title">Le Milano — Gestion TikTok</h1>
+            <p class="hero-projet-sub">Pizzeria artisanale — Stratégie & production de vidéos courtes</p>
+
+            <nav class="breadcrumb" aria-label="Fil d’Ariane">
+                <a href="index.html#portfolio">Portfolio</a>
+                <span aria-hidden="true">›</span>
+                <span>Le Milano</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- ===== CONTENU PROJET ===== -->
+    <main class="section-projet">
+        <div class="container projet-grid">
+            <!-- Média gauche : IMAGE -->
+            <figure class="projet-media">
+                <img src="images/milano-photo1.jpg"
+                    alt="Pizzeria Le Milano — ambiance conviviale et pizzas artisanales" />
+                <figcaption class="sr-only">Visuel du restaurant Le Milano.</figcaption>
+            </figure>
+
+            <figure class="projet-media">
+                <img src="images/milano-photo2.jpg"
+                    alt="Pizzeria Le Milano — ambiance conviviale et pizzas artisanales" />
+                <figcaption class="sr-only">Visuel du restaurant Le Milano.</figcaption>
+            </figure>
+
+            <!-- Média droite : VIDEO -->
+            <figure class="projet-media">
+                <!-- Option 1 : MP4 local -->
+                <video src="videos/milano-tiktok.mp4" controls playsinline
+                    poster="images/milano-video-cover.jpg"></video>
+
+                <figcaption class="sr-only">Vidéo courte réalisée pour TikTok.</figcaption>
+            </figure>
+        </div>
+
+        <div class="container projet-texte">
+            <h2 class="titre-apropos">Projet</h2>
+            <p class="texte-apropos">
+                Je gère le compte TikTok du restaurant <strong>Le Milano</strong>, une pizzeria artisanale connue pour
+                ses
+                recettes généreuses et son ambiance conviviale. Mon objectif : créer des vidéos courtes et attractives
+                qui reflètent la qualité des produits et suscitent l’envie de commander.
+            </p>
+            <p class="texte-apropos">
+                En seulement quelques semaines, la page a connu une forte croissance. Une des vidéos a particulièrement
+                performé :
+            </p>
+
+            <!-- KPIs -->
+            <ul class="kpi-wrap">
+                <li class="kpi">
+                    <span class="kpi__valeur">819 000</span>
+                    <span class="kpi__libelle">vues</span>
+                </li>
+                <li class="kpi">
+                    <span class="kpi__valeur">22 900</span>
+                    <span class="kpi__libelle">likes</span>
+                </li>
+                <li class="kpi">
+                    <span class="kpi__valeur">1 859</span>
+                    <span class="kpi__libelle">partages</span>
+                </li>
+                <li class="kpi">
+                    <span class="kpi__valeur">1 780</span>
+                    <span class="kpi__libelle">visites de profil</span>
+                </li>
+            </ul>
+
+            <p class="texte-apropos">
+                Ce résultat montre la puissance d’un contenu bien ciblé et authentique, capable de transformer une
+                simple vidéo
+                en levier de visibilité locale.
+            </p>
+            <p class="texte-apropos">
+                Je continue d’accompagner Le Milano avec une <strong>stratégie TikTok</strong> basée sur la régularité,
+                la mise en avant produit et les tendances audio.
+            </p>
+
+            <div class="cta-portfolio">
+                <a href="#contact" class="bouton bouton--or">Discutons de votre projet</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== CONTACT (alt) ===== -->
+    <section id="contact" class="section-contact-alt" aria-labelledby="titre-contact-alt">
+        <div class="bande-terracotta" aria-hidden="true"></div>
+
+        <div class="conteneur contenu-contact-alt">
+            <!-- Colonne infos -->
+            <div class="bloc-infos-alt">
+                <p class="sur-titre-contact">Discutons</p>
+                <h2 id="titre-contact-alt" class="titre-contact-alt">Contactez-nous</h2>
+                <p class="texte-contact-alt">
+                    Un brief, une idée, un tournage à planifier ? Notre équipe vous répond rapidement.
+                </p>
+
+                <ul class="liste-canaux">
+                    <li class="canal">
+                        <span class="icn">📞</span>
+                        <div>
+                            <strong>Téléphone</strong><br>
+                            <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+                        </div>
+                    </li>
+                    <li class="canal">
+                        <span class="icn">✉️</span>
+                        <div>
+                            <strong>Email</strong><br>
+                            <a href="mailto:baissakmedia@gmail.com">baissakmedia@gmail.com</a>
+                        </div>
+                    </li>
+                    <li class="canal">
+                        <span class="icn">📍</span>
+                        <div>
+                            <strong>Studio</strong><br>
+                            123 Rue de Rivoli, 75001 Paris
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="mini-badges">
+                    <span class="badge">⏱ Réponse ~24h</span>
+                    <span class="badge">🎬 Devis gratuit</span>
+                </div>
+            </div>
+
+            <!-- Carte formulaire flottante -->
+            <form class="carte-formulaire" action="#" method="post" aria-label="Formulaire de contact">
+                <h3 class="titre-form">Dites-nous tout</h3>
+
+                <div class="ligne-2">
+                    <label class="champ">
+                        <span>Nom</span>
+                        <input type="text" name="nom" autocomplete="name" required>
+                    </label>
+                    <label class="champ">
+                        <span>Email</span>
+                        <input type="email" name="email" autocomplete="email" required>
+                    </label>
+                </div>
+
+                <label class="champ">
+                    <span>Sujet</span>
+                    <input type="text" name="sujet" placeholder="Ex : Tournage vidéo reels" required>
+                </label>
+
+                <label class="champ">
+                    <span>Message</span>
+                    <textarea name="message" rows="5" placeholder="Parlez-nous de votre besoin…" required></textarea>
+                </label>
+
+                <button class="bouton bouton--or" type="submit"><span>Envoyer</span></button>
+                <p class="note-rgpd-alt">En envoyant, vous acceptez notre politique de confidentialité.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER (identique) ===== -->
+    <footer id="pied-de-page" class="pied-de-page" role="contentinfo">
+        <div class="bande-degrade" aria-hidden="true"></div>
+
+        <div class="conteneur grille-footer v3">
+            <div class="col-footer marque-col">
+                <a href="index.html#accueil" class="marque marque--footer" aria-label="Accueil Baissak Media">
+                    <span class="marque__nom">Baissak</span>
+                    <span class="marque__tag">Media</span>
+                </a>
+                <p class="texte-footer">Agence de communication, création de contenu & montage vidéo.</p>
+
+                <div class="reseaux">
+                    <a class="icone-reseau" href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                            stroke-width="1.6">
+                            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                            <circle cx="12" cy="12" r="3.5"></circle>
+                            <circle cx="17.3" cy="6.7" r="1.2" fill="currentColor" stroke="none"></circle>
+                        </svg>
+                    </a>
+                    <a class="icone-reseau" href="#" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                            <path
+                                d="M15 3h2a5 5 0 0 0 5 5v2a7 7 0 0 1-5-2v7.5A5.5 5.5 0 1 1 11 10h2a3.5 3.5 0 1 0 3 3.46V3z" />
+                        </svg>
+                    </a>
+                    <a class="icone-reseau" href="#" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                            <path
+                                d="M23 7.5a4 4 0 0 0-3-3.8C17.8 3 12 3 12 3s-5.8 0-8 .7A4 4 0 0 0 1 7.5 41 41 0 0 0 1 12a41 41 0 0 0 1 4.5 4 4 0 0 0 3 3.8c2.2.7 8 .7 8 .7s5.8 0 8-.7a4 4 0 0 0 3-3.8 41 41 0 0 0 1-4.5 41 41 0 0 0-1-4.5zM10 15.5v-7l6 3.5-6 3.5z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <nav class="col-footer" aria-label="Navigation pied de page">
+                <h4 class="titre-col">Navigation</h4>
+                <ul class="liste-liens">
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#about">À propos</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="col-footer">
+                <h4 class="titre-col">Services</h4>
+                <ul class="liste-liens">
+                    <li><a href="index.html#services">Social Media Management</a></li>
+                    <li><a href="index.html#services">Content Creation</a></li>
+                    <li><a href="index.html#services">Video Editing</a></li>
+                </ul>
+            </div>
+
+            <form class="col-footer bloc-newsletter bloc-newsletter--footer" action="#" method="post"
+                aria-label="Newsletter">
+                <h4 class="titre-col">Newsletter</h4>
+                <p class="texte-footer">Invitations, coulisses & nouveautés.</p>
+                <label class="sr-only" for="email-footer">Adresse email</label>
+                <div class="ligne-champ">
+                    <input id="email-footer" class="champ-texte champ-texte--footer" type="email" name="email"
+                        placeholder="vous@exemple.fr" required>
+                    <button class="bouton bouton--or bouton--compact" type="submit">S’inscrire</button>
+                </div>
+                <p class="note-rgpd note-rgpd--footer">Désinscription en un clic.</p>
+            </form>
+        </div>
+
+        <div class="bas-footer">
+            <div class="conteneur barres-legales">
+                <p class="mention">
+                    &copy; <span id="annee"></span> Baissak Media — Tous droits réservés.
+                </p>
+                <ul class="liens-legaux">
+                    <li><a href="#" rel="nofollow">Mentions légales</a></li>
+                    <li><a href="#" rel="nofollow">Confidentialité</a></li>
+                    <li><a href="#" rel="nofollow">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>document.getElementById('annee').textContent = new Date().getFullYear();</script>
+
+    <!-- tiny JS for mobile menu -->
+    <script>
+        const btn = document.querySelector('.nav-toggle');
+        const list = document.getElementById('menu');
+        btn?.addEventListener('click', () => {
+            const open = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', String(!open));
+            list.classList.toggle('is-open');
+        });
+    </script>
+</body>
+
+</html>
