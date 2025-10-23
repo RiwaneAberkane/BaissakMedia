@@ -233,6 +233,7 @@ body {
     /* border-radius: var(--radius); */
     padding: 32px 22px;
     transition: transform .3s ease, box-shadow .3s ease, background .3s ease;
+    margin: 10px;
 }
 
 .carte-service:hover {
