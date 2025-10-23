@@ -181,6 +181,7 @@ body {
     .nav-list.is-open {
         display: flex;
         justify-content: space-around;
+        box-shadow: -10px 5px 5px rgba(0, 0, 0, 0.329);
     }
 
     .nav-list .nav-link {
@@ -193,8 +194,8 @@ body {
         bottom: 0;
     }
 
-    .nav-list .nav-cta {
-        border-color: var(--terracotta);
+    .nav-list .nav-cta:hover {
+        background: none;
     }
 }
 
@@ -230,7 +231,6 @@ body {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    /* border-radius: var(--radius); */
     padding: 32px 22px;
     transition: transform .3s ease, box-shadow .3s ease, background .3s ease;
     margin: 10px;
