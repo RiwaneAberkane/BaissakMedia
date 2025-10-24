@@ -28,17 +28,6 @@ body {
     text-align: center;
 }
 
-/* Marque */
-.brand {
-    display: inline-block;
-    text-decoration: none;
-    letter-spacing: .06em;
-    font-weight: 700;
-    font-family: "Cormorant Garamond", serif;
-    margin-bottom: .75rem;
-    color: inherit;
-}
-
 /* Titres et textes */
 .eyebrow {
     font-size: .85rem;

@@ -61,6 +61,17 @@
         &copy; <span id="annee"></span> Baissak Media — Tous droits réservés.
     </footer>
 
+    <!-- tiny JS for mobile menu -->
+    <script>
+        const btn = document.querySelector('.nav-toggle');
+        const list = document.getElementById('menu');
+        btn?.addEventListener('click', () => {
+            const open = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', String(!open));
+            list.classList.toggle('is-open');
+        });
+    </script>
+
     <script>
         document.getElementById('annee').textContent = new Date().getFullYear();
     </script>
