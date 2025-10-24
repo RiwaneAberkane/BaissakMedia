@@ -129,23 +129,31 @@
             </div>
 
             <!-- Carte formulaire flottante -->
-            <form class="carte-formulaire" action="#" method="post" aria-label="Formulaire de contact">
+            <form class="carte-formulaire" name="contact" method="POST" action="/merci.html" data-netlify="true"
+                netlify-honeypot="bot-field" aria-label="Formulaire de contact">
+
+                <input type="hidden" name="form-name" value="contact" />
+
+                <p class="sr-only" hidden>
+                    <label>Ne pas remplir ce champ : <input name="bot-field" /></label>
+                </p>
+
                 <h3 class="titre-form">Dites-nous tout</h3>
 
                 <div class="ligne-2">
                     <label class="champ">
                         <span>Nom</span>
-                        <input type="text" name="nom" autocomplete="name" required>
+                        <input type="text" name="nom" autocomplete="name" required />
                     </label>
                     <label class="champ">
                         <span>Email</span>
-                        <input type="email" name="email" autocomplete="email" required>
+                        <input type="email" name="email" autocomplete="email" required />
                     </label>
                 </div>
 
                 <label class="champ">
                     <span>Sujet</span>
-                    <input type="text" name="sujet" placeholder="Ex : Tournage vidéo reels" required>
+                    <input type="text" name="sujet" placeholder="Ex : Tournage vidéo reels" required />
                 </label>
 
                 <label class="champ">
@@ -154,6 +162,7 @@
                 </label>
 
                 <button class="bouton bouton--or" type="submit"><span>Envoyer</span></button>
+
                 <p class="note-rgpd-alt">En envoyant, vous acceptez notre politique de confidentialité.</p>
             </form>
         </div>
@@ -262,6 +271,57 @@
             list.classList.toggle('is-open');
         });
     </script>
+
+    <script>
+        (function () {
+            const form = document.querySelector('form.carte-formulaire[name="contact"]');
+            if (!form) return;
+
+            const successEl = document.getElementById('contact-success');
+            const errorEl = document.getElementById('contact-error');
+            const btn = form.querySelector('button[type="submit"]');
+
+            function encode(data) {
+                return Object.keys(data)
+                    .map(k => encodeURIComponent(k) + "=" + encodeURIComponent(data[k]))
+                    .join("&");
+            }
+
+            // form.addEventListener('submit', async (e) => {
+            //     e.preventDefault();
+            //     successEl.style.display = 'none';
+            //     errorEl.style.display = 'none';
+            //     btn.disabled = true;
+
+            //     const formData = new FormData(form);
+            //     // Netlify a besoin de form-name dans le body
+            //     formData.append("form-name", form.getAttribute("name"));
+
+            //     try {
+            //         await fetch("/", {
+            //             method: "POST",
+            //             headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            //             body: encode(Object.fromEntries(formData))
+            //         });
+            //         form.reset();
+            //         successEl.style.display = 'inline-block';
+            //     } catch (err) {
+            //         console.error(err);
+            //         errorEl.style.display = 'inline-block';
+            //     } finally {
+            //         btn.disabled = false;
+            //     }
+            // });
+        })();
+    </script>
+
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" method="POST" style="display:none;">
+        <input type="hidden" name="form-name" value="contact">
+        <input type="text" name="nom">
+        <input type="email" name="email">
+        <input type="text" name="sujet">
+        <textarea name="message"></textarea>
+    </form>
 </body>
 
 </html>
