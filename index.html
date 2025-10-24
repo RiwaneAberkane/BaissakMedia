@@ -76,7 +76,7 @@
                             <path d="M12 2v20M5 8h14M5 16h14" />
                         </svg>
                     </div>
-                    <h3 class="titre-service">Content Creation</h3>
+                    <h3 class="titre-service">Création de contenu</h3>
                     <p class="texte-service">
                         Conception et production de contenus sur mesure : shootings photo, stories, carrousels,
                         scripts et storytelling alignés avec votre identité de marque.
@@ -92,7 +92,7 @@
                             <path d="M8 8h8v8H8z" />
                         </svg>
                     </div>
-                    <h3 class="titre-service">Video Editing</h3>
+                    <h3 class="titre-service">Montage vidéo</h3>
                     <p class="texte-service">
                         Montage professionnel pour publicités, reels et campagnes brandées : rythme, habillage,
                         sous-titres, sound design et exports optimisés pour chaque plateforme.
@@ -118,7 +118,7 @@
                 <!-- Projet 1 -->
                 <article class="carte-portfolio">
                     <a href="projet-milano.html" class="visuel-portfolio" aria-label="Voir le projet Le Milano">
-                        <img src="images/milano-photo1.jpg" alt="Campagne réseaux sociaux mode">
+                        <img src="images/projetmilano.jpg" alt="Campagne réseaux sociaux mode">
                         <figcaption class="overlay-portfolio">
                             <div class="overlay-texte">
                                 <h3>Campagne Social Media</h3>
@@ -132,7 +132,7 @@
                 <article class="carte-portfolio">
                     <a href="projet-funky-doughny.html" class="visuel-portfolio"
                         aria-label="Voir le projet Funky Doughny">
-                        <img src="images/funky-dougny.jpg" alt="Funky Doughny — montage vidéo social">
+                        <img src="images/projetfd.jpg" alt="Funky Doughny — montage vidéo social">
                         <figcaption class="overlay-portfolio">
                             <div class="overlay-texte">
                                 <h3>Funky Doughny</h3>
@@ -146,7 +146,7 @@
                 <article class="carte-portfolio">
                     <a href="projet-halal-food-caen.html" class="visuel-portfolio"
                         aria-label="Voir le projet Halal Food Caen">
-                        <img src="images/hfc1.jpg" alt="Halal Food Caen — sélection d’adresses">
+                        <img src="images/projethfc.jpg" alt="Halal Food Caen — sélection d’adresses">
                         <figcaption class="overlay-portfolio">
                             <div class="overlay-texte">
                                 <h3>Halal Food Caen</h3>
@@ -237,7 +237,15 @@
             </div>
 
             <!-- Carte formulaire flottante -->
-            <form class="carte-formulaire" action="#" method="post" aria-label="Formulaire de contact">
+            <form class="carte-formulaire" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+                aria-label="Formulaire de contact">
+                <!-- requis par Netlify pour identifier le formulaire -->
+                <input type="hidden" name="form-name" value="contact" />
+                <!-- honeypot anti-spam (caché aux humains) -->
+                <p class="sr-only" hidden>
+                    <label>Ne pas remplir : <input name="bot-field" /></label>
+                </p>
+
                 <h3 class="titre-form">Dites-nous tout</h3>
 
                 <div class="ligne-2">
@@ -262,8 +270,15 @@
                 </label>
 
                 <button class="bouton bouton--or" type="submit"><span>Envoyer</span></button>
+
+                <!-- feedback UI -->
                 <p class="note-rgpd-alt">En envoyant, vous acceptez notre politique de confidentialité.</p>
+                <p id="contact-success" class="badge" style="display:none;">✅ Message envoyé. On revient vers vous
+                    rapidement.</p>
+                <p id="contact-error" class="badge" style="display:none;">❌ Une erreur est survenue. Réessayez plus
+                    tard.</p>
             </form>
+
         </div>
     </section>
 
@@ -323,8 +338,8 @@
                 <h4 class="titre-col">Services</h4>
                 <ul class="liste-liens">
                     <li><a href="#services">Social Media Management</a></li>
-                    <li><a href="#services">Content Creation</a></li>
-                    <li><a href="#services">Video Editing</a></li>
+                    <li><a href="#services">Création de contenu</a></li>
+                    <li><a href="#services">Montage vidéo</a></li>
                 </ul>
             </div>
 
@@ -369,6 +384,49 @@
             btn.setAttribute('aria-expanded', String(!open));
             list.classList.toggle('is-open');
         });
+    </script>
+
+    <script>
+        (function () {
+            const form = document.querySelector('form.carte-formulaire[name="contact"]');
+            if (!form) return;
+
+            const successEl = document.getElementById('contact-success');
+            const errorEl = document.getElementById('contact-error');
+            const btn = form.querySelector('button[type="submit"]');
+
+            function encode(data) {
+                return Object.keys(data)
+                    .map(k => encodeURIComponent(k) + "=" + encodeURIComponent(data[k]))
+                    .join("&");
+            }
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                successEl.style.display = 'none';
+                errorEl.style.display = 'none';
+                btn.disabled = true;
+
+                const formData = new FormData(form);
+                // Netlify a besoin de form-name dans le body
+                formData.append("form-name", form.getAttribute("name"));
+
+                try {
+                    await fetch("/", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                        body: encode(Object.fromEntries(formData))
+                    });
+                    form.reset();
+                    successEl.style.display = 'inline-block';
+                } catch (err) {
+                    console.error(err);
+                    errorEl.style.display = 'inline-block';
+                } finally {
+                    btn.disabled = false;
+                }
+            });
+        })();
     </script>
 </body>
 
