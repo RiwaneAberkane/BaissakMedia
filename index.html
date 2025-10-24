@@ -236,14 +236,16 @@
                 </div>
             </div>
 
-            <!-- Carte formulaire flottante -->
-            <form class="carte-formulaire" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"
-                aria-label="Formulaire de contact">
+            <!-- ===== FORMULAIRE DE CONTACT (Netlify Ready) ===== -->
+            <form class="carte-formulaire" name="contact" method="POST" action="/merci.html" data-netlify="true"
+                netlify-honeypot="bot-field" aria-label="Formulaire de contact">
+
                 <!-- requis par Netlify pour identifier le formulaire -->
                 <input type="hidden" name="form-name" value="contact" />
-                <!-- honeypot anti-spam (caché aux humains) -->
+
+                <!-- honeypot anti-spam (invisible pour les humains) -->
                 <p class="sr-only" hidden>
-                    <label>Ne pas remplir : <input name="bot-field" /></label>
+                    <label>Ne pas remplir ce champ : <input name="bot-field" /></label>
                 </p>
 
                 <h3 class="titre-form">Dites-nous tout</h3>
@@ -251,17 +253,18 @@
                 <div class="ligne-2">
                     <label class="champ">
                         <span>Nom</span>
-                        <input type="text" name="nom" autocomplete="name" required>
+                        <input type="text" name="nom" autocomplete="name" required />
                     </label>
+
                     <label class="champ">
                         <span>Email</span>
-                        <input type="email" name="email" autocomplete="email" required>
+                        <input type="email" name="email" autocomplete="email" required />
                     </label>
                 </div>
 
                 <label class="champ">
                     <span>Sujet</span>
-                    <input type="text" name="sujet" placeholder="Ex : Tournage vidéo reels" required>
+                    <input type="text" name="sujet" placeholder="Ex : Tournage vidéo reels" required />
                 </label>
 
                 <label class="champ">
@@ -269,15 +272,15 @@
                     <textarea name="message" rows="5" placeholder="Parlez-nous de votre besoin…" required></textarea>
                 </label>
 
-                <button class="bouton bouton--or" type="submit"><span>Envoyer</span></button>
+                <button class="bouton bouton--or" type="submit">
+                    <span>Envoyer</span>
+                </button>
 
-                <!-- feedback UI -->
-                <p class="note-rgpd-alt">En envoyant, vous acceptez notre politique de confidentialité.</p>
-                <p id="contact-success" class="badge" style="display:none;">✅ Message envoyé. On revient vers vous
-                    rapidement.</p>
-                <p id="contact-error" class="badge" style="display:none;">❌ Une erreur est survenue. Réessayez plus
-                    tard.</p>
+                <p class="note-rgpd-alt">
+                    En envoyant, vous acceptez notre politique de confidentialité.
+                </p>
             </form>
+
 
         </div>
     </section>
@@ -428,6 +431,14 @@
             });
         })();
     </script>
+
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" method="POST" style="display:none;">
+        <input type="hidden" name="form-name" value="contact">
+        <input type="text" name="nom">
+        <input type="email" name="email">
+        <input type="text" name="sujet">
+        <textarea name="message"></textarea>
+    </form>
 </body>
 
 </html>
