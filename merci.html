@@ -4,13 +4,56 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Merci</title>
+    <title>Merci — Baissak Media</title>
+
+    <!-- Polices & styles globaux -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="merci.css" />
 </head>
 
 <body>
-    <h1>Merci !</h1>
-    <p>Votre message a bien été envoyé. Nous revenons vers vous très vite.</p>
-    <p><a href="/">← Retour au site</a></p>
+    <!-- En-tête -->
+    <header class="site-header" style="border-bottom: 0;">
+        <div class="container header-bar" style="justify-content: center; padding-block: 1.25rem;">
+            <a href="/" class="brand" aria-label="Baissak Media">
+                BAISSAK MEDIA
+            </a>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="merci-wrap" role="main">
+        <section class="merci-card" aria-labelledby="merci-title">
+            <p class="eyebrow">Votre message a été envoyé</p>
+            <h1 id="merci-title" class="merci-title">Merci pour votre message 🎉</h1>
+
+            <p class="merci-text">
+                Nous avons bien reçu votre message et revenons vers vous très vite.
+                Si votre demande est urgente, n’hésitez pas à nous contacter directement par téléphone ou par email.
+            </p>
+
+            <p class="merci-meta">
+                Réponse moyenne : ~24h — L’équipe Baissak Media
+            </p>
+
+            <div class="merci-actions">
+                <a href="/" class="bouton bouton--or">← Retour à l’accueil</a>
+                <a href="/#contact" class="bouton bouton--ghost">Envoyer un autre message</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="merci-footer">
+        &copy; <span id="annee"></span> Baissak Media — Tous droits réservés.
+    </footer>
+
+    <script>
+        document.getElementById('annee').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,121 @@
+:root {
+    --gap: 1rem;
+}
+
+/* Structure globale */
+body {
+    min-height: 100svh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    margin: 0;
+    background: #fff;
+}
+
+.merci-wrap {
+    display: grid;
+    place-items: center;
+    padding: 4rem 1.25rem;
+}
+
+/* Carte centrale */
+.merci-card {
+    max-width: 720px;
+    width: 100%;
+    background: #fff;
+    border-radius: 1.25rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .07);
+    padding: clamp(1.25rem, 3vw, 2rem);
+    text-align: center;
+}
+
+/* Marque */
+.brand {
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: .06em;
+    font-weight: 700;
+    font-family: "Cormorant Garamond", serif;
+    margin-bottom: .75rem;
+    color: inherit;
+}
+
+/* Titres et textes */
+.eyebrow {
+    font-size: .85rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    opacity: .6;
+    margin: 0 0 .5rem;
+}
+
+.merci-title {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+    line-height: 1.15;
+    margin: 0 0 .75rem;
+}
+
+.merci-text {
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    line-height: 1.65;
+    font-size: 1rem;
+    margin: 0 auto 1.25rem;
+    max-width: 60ch;
+    opacity: .9;
+}
+
+.merci-meta {
+    font-size: .9rem;
+    opacity: .7;
+    margin: 0 0 1.75rem;
+}
+
+/* Boutons */
+.merci-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    justify-content: center;
+}
+
+.bouton {
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .75rem 1.2rem;
+    border-radius: 999px;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    transition: all .3s ease;
+}
+
+.bouton--or {
+    background: linear-gradient(135deg, #b9974b, #e6c974);
+    color: #fff;
+    border: none;
+}
+
+.bouton--or:hover {
+    filter: brightness(1.05);
+}
+
+.bouton--ghost {
+    background: transparent;
+    border: 1px solid currentColor;
+    color: #333;
+}
+
+.bouton--ghost:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Footer */
+.merci-footer {
+    text-align: center;
+    font-size: .9rem;
+    opacity: .7;
+    padding: 1rem 0 2rem;
+}
