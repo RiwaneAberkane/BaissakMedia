@@ -86,16 +86,23 @@ body {
     align-items: center;
     justify-content: center;
     padding: .75rem 1.2rem;
-    border-radius: 999px;
     font-family: Inter, sans-serif;
     font-weight: 500;
     transition: all .3s ease;
 }
 
 .bouton--or {
-    background: linear-gradient(135deg, #b9974b, #e6c974);
+    background: linear-gradient(135deg, var(--terracotta), #b24f38);
     color: #fff;
     border: none;
+    padding: 13px 28px;
+    font-weight: 600;
+    letter-spacing: .05em;
+    box-shadow: 0 6px 18px rgba(197, 91, 67, .3);
+    transition: all .3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .bouton--or:hover {
