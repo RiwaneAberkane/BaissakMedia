@@ -339,13 +339,9 @@
             <!-- Col 4 : Newsletter + contact court -->
             <form class="col-footer bloc-newsletter bloc-newsletter--footer" name="newsletter" method="POST"
                 data-netlify="true" netlify-honeypot="hp-news" aria-label="Newsletter">
-                <!-- requis par Netlify -->
-                <input type="hidden" name="form-name" value="newsletter" />
 
-                <!-- honeypot anti-spam -->
-                <p class="sr-only" hidden>
-                    <label>Ne pas remplir : <input name="hp-news" /></label>
-                </p>
+                <input type="hidden" name="form-name" value="newsletter" />
+                <p class="sr-only" hidden><label>Ne pas remplir : <input name="hp-news" /></label></p>
 
                 <h4 class="titre-col">Newsletter</h4>
                 <p class="texte-footer">Invitations, coulisses & nouveautés.</p>
@@ -354,15 +350,20 @@
                 <div class="ligne-champ">
                     <input id="email-footer" class="champ-texte champ-texte--footer" type="email" name="email"
                         placeholder="vous@exemple.fr" required>
-                    <button class="bouton bouton--or bouton--compact" type="submit">S’inscrire</button>
                 </div>
 
-                <p class="note-rgpd note-rgpd--footer">Désinscription en un clic.</p>
+                <label class="checkbox">
+                    <input type="checkbox" name="rgpd" required>
+                    <span>J’accepte de recevoir la newsletter. Je peux me désinscrire à tout moment.</span>
+                </label>
 
-                <!-- feedback -->
-                <p id="nl-success" class="badge" style="display:none;">✅ Merci ! Vous êtes bien inscrit(e).</p>
-                <p id="nl-error" class="badge" style="display:none;">❌ Oups, réessayez dans un instant.</p>
+                <button class="bouton bouton--or bouton--compact" type="submit">S’inscrire</button>
+
+                <p class="note-rgpd note-rgpd--footer">Désinscription en un clic.</p>
             </form>
+
+            <!-- ✅ conteneur pour les notifications -->
+            <div id="toast-container"></div>
 
         </div>
 
@@ -437,7 +438,7 @@
         })();
     </script>
 
-    <script>
+    <!-- <script>
         (function () {
             const form = document.querySelector('form[name="newsletter"]');
             if (!form) return;
@@ -478,7 +479,50 @@
                 }
             });
         })();
+    </script> -->
+
+    <script>
+        (function () {
+            const form = document.querySelector('form[name="newsletter"]');
+            const toastContainer = document.getElementById('toast-container');
+            if (!form || !toastContainer) return;
+
+            function showToast(message, type = "success") {
+                const toast = document.createElement('div');
+                toast.className = `toast toast--${type}`;
+                toast.textContent = message;
+                toastContainer.appendChild(toast);
+                // Supprimer après l'animation
+                setTimeout(() => toast.remove(), 4000);
+            }
+
+            function encode(data) {
+                return Object.keys(data)
+                    .map(k => encodeURIComponent(k) + "=" + encodeURIComponent(data[k]))
+                    .join("&");
+            }
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const fd = new FormData(form);
+                fd.append('form-name', form.getAttribute('name'));
+
+                try {
+                    await fetch("/", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                        body: encode(Object.fromEntries(fd))
+                    });
+                    form.reset();
+                    showToast("Merci pour votre inscription 💌", "success");
+                } catch (err) {
+                    console.error(err);
+                    showToast("Oups ! Une erreur s’est produite.", "error");
+                }
+            });
+        })();
     </script>
+
 
     <form name="newsletter" data-netlify="true" netlify-honeypot="hp-news" method="POST" style="display:none;">
         <input type="hidden" name="form-name" value="newsletter">
